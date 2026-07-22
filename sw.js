@@ -1,5 +1,5 @@
 /* Simple offline cache: app shell cache-first, unit data network-first. */
-const VERSION = 'mecha-companion-v1';
+const VERSION = 'mecha-companion-v2';
 const SHELL = [
   '.',
   'index.html',
@@ -39,7 +39,17 @@ self.addEventListener('fetch', e => {
     return;
   }
 
+  // Cache-first with runtime fill, so unit portraits work offline after first view.
   e.respondWith(
-    caches.match(e.request).then(cached => cached || fetch(e.request))
+    caches.match(e.request).then(cached =>
+      cached ||
+      fetch(e.request).then(res => {
+        if (res.ok) {
+          const copy = res.clone();
+          caches.open(VERSION).then(c => c.put(e.request, copy));
+        }
+        return res;
+      })
+    )
   );
 });

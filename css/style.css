@@ -157,6 +157,25 @@ body {
 .unit-cell:active { border-color: var(--accent); }
 .unit-cell.selected { border-color: var(--accent); background: rgba(240, 168, 50, 0.12); }
 .unit-emoji { font-size: 1.5rem; }
+
+/* ---------- Unit portraits ---------- */
+.unit-icon {
+  object-fit: cover;
+  border-radius: 8px;
+  background: var(--bg-3);
+  flex-shrink: 0;
+}
+.unit-icon-fallback { flex-shrink: 0; }
+.icon-cell { width: 56px; height: 56px; border-radius: 10px; }
+span.icon-cell { font-size: 1.5rem; line-height: 56px; }
+.icon-row { width: 46px; height: 46px; }
+span.icon-row { font-size: 1.7rem; }
+.icon-chip { width: 22px; height: 22px; border-radius: 6px; }
+span.icon-chip { font-size: 0.9rem; }
+.icon-mini { width: 30px; height: 30px; border-radius: 7px; }
+span.icon-mini { font-size: 1rem; }
+.icon-sheet { width: 58px; height: 58px; border-radius: 12px; }
+span.icon-sheet { font-size: 2rem; }
 .unit-cost { color: var(--text-dim); font-size: 0.68rem; }
 .unit-count-badge {
   position: absolute;

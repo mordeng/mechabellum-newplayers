@@ -121,6 +121,15 @@
 
   function unitEmoji(u) { return u.emoji || '🤖'; }
 
+  /* Unit portrait <img> (scraped set in img/units/), falling back to the
+   * emoji if the image is missing — e.g. for future units. */
+  function unitIcon(u, cls = '') {
+    const src = u.icon || `img/units/${u.id}.jpg`;
+    return `<img class="unit-icon ${cls}" src="${src}" alt="" loading="lazy"` +
+      ` onerror="this.style.display='none';this.nextElementSibling.style.display=''">` +
+      `<span class="unit-icon-fallback ${cls}" style="display:none">${unitEmoji(u)}</span>`;
+  }
+
   function unitBadges(u) {
     let b = `<span class="badge ${u.type === 'air' ? 'air' : ''}">${u.type}</span>`;
     if (u.giant) b += ' <span class="badge giant">giant</span>';
@@ -166,7 +175,7 @@
       const cell = document.createElement('button');
       cell.className = 'unit-cell' + (selectedId === u.id ? ' selected' : '');
       cell.innerHTML =
-        `<span class="unit-emoji">${unitEmoji(u)}</span>` +
+        unitIcon(u, 'icon-cell') +
         `<span>${esc(u.name)}</span>` +
         `<span class="unit-cost">${u.cost} supply</span>` +
         (counts && counts[u.id] ? `<span class="unit-count-badge">${counts[u.id]}</span>` : '');
@@ -201,7 +210,7 @@
     const row = document.createElement('div');
     row.className = 'counter-row';
     row.innerHTML =
-      `<span class="counter-emoji">${unitEmoji(counter)}</span>` +
+      unitIcon(counter, 'icon-row') +
       `<div class="counter-main">` +
         `<div class="counter-name">${esc(counter.name)}<span class="unit-cost">${counter.cost} supply</span></div>` +
         (edge.reason ? `<div class="counter-reason">${esc(edge.reason)}</div>` : '') +
@@ -266,7 +275,7 @@
       </div>
       <div class="card">
         <div class="row">
-          <span class="counter-emoji">${unitEmoji(enemy)}</span>
+          ${unitIcon(enemy, 'icon-row')}
           <div>
             <div class="counter-name">Trouble against ${esc(enemy.name)}</div>
             <div class="counter-meta">${unitBadges(enemy)} <span class="badge">${enemy.cost} supply</span></div>
@@ -375,7 +384,7 @@
         if (!u) continue;
         const chip = document.createElement('button');
         chip.className = 'threat-chip';
-        chip.innerHTML = `${unitEmoji(u)} ${esc(u.name)} ×${n} <span class="x">−</span>`;
+        chip.innerHTML = `${unitIcon(u, 'icon-chip')} ${esc(u.name)} ×${n} <span class="x">−</span>`;
         chip.addEventListener('click', () => {
           counts[id] = n - 1;
           if (counts[id] <= 0) delete counts[id];
@@ -413,7 +422,7 @@
         const row = document.createElement('div');
         row.className = 'counter-row';
         row.innerHTML =
-          `<span class="counter-emoji">${unitEmoji(u)}</span>` +
+          unitIcon(u, 'icon-row') +
           `<div class="counter-main">` +
             `<div class="counter-name">${esc(u.name)}<span class="unit-cost">${u.cost} supply</span></div>` +
             `<div class="covers">Covers: ${s.covers.map(c => `<b>${esc(c.name)}</b>&nbsp;×${c.n}`).join(', ')}</div>` +
@@ -467,7 +476,7 @@
 
     const frag = h(`
       <div class="row">
-        <span style="font-size:2rem">${unitEmoji(u)}</span>
+        ${unitIcon(u, 'icon-sheet')}
         <div>
           <h2>${esc(u.name)}</h2>
           <div class="counter-meta">${unitBadges(u)} <span class="badge">${u.cost} supply</span></div>
@@ -487,7 +496,7 @@
       if (!other) return null;
       const el = document.createElement('div');
       el.className = 'mini-counter';
-      el.innerHTML = `<span>${unitEmoji(other)}</span><b>${esc(other.name)}</b>` +
+      el.innerHTML = `${unitIcon(other, 'icon-mini')}<b>${esc(other.name)}</b>` +
         `<span class="reason">${esc(edge.reason || '')}</span>`;
       el.addEventListener('click', () => openUnitSheet(other.id));
       return el;

@@ -12,7 +12,7 @@ A mobile-first companion app for **new Mechabellum players**. The core question 
 - **💡 New Player Tips** — the fundamentals: economy, supply drops, positioning, specialists, and common beginner mistakes.
 - **🗳️ Community adjustable** — vote counters up/down based on your own games (the ranking adapts), add your own counter entries, and export/import your adjustments to share them. The underlying database is a plain JSON file anyone can improve via pull request.
 
-Counter baseline adapted from the excellent unit guides at [mechamonarch.com](https://mechamonarch.com/unit/) — go read them. Not affiliated with Game River or mechamonarch.
+Counter baseline adapted from the excellent unit guides at [mechamonarch.com](https://mechamonarch.com/unit/) — go read them. Unit portraits in `img/units/` are Mechabellum game art (© Game River), sourced via mechamonarch, used here for a non-commercial fan project. Not affiliated with Game River or mechamonarch.
 
 ## Using it on your phone
 
