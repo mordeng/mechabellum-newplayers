@@ -1,0 +1,989 @@
+{
+  "$comment": "Community counter database for Mechabellum. Baseline adapted from the unit guides at https://mechamonarch.com/unit/. Edit this file via PR to improve the data — see CONTRIBUTING.md. strength: 1 = soft counter, 2 = good counter (default), 3 = hard counter.",
+  "version": 1,
+  "units": [
+    {
+      "id": "arclight",
+      "name": "Arclight",
+      "emoji": "🔆",
+      "cost": 100,
+      "type": "ground",
+      "giant": false,
+      "description": "Durable ranged ground unit with a splash cannon that is the standard chaff-clear tool, staying strong against Crawlers throughout the entire game. With Charged Shot it also punishes medium-unit pushes.",
+      "counters": [
+        { "unit": "Crawler", "reason": "Splash shots wipe Crawler packs in every phase of the game", "strength": 3 },
+        { "unit": "Fang", "reason": "Clears them early game, though shielded Fangs later blunt its damage" },
+        { "unit": "Sledgehammer", "reason": "Charged Shot tech lets it burst down medium armored pushes" },
+        { "unit": "Steel Ball", "reason": "Charged Shot deletes Steel Balls before they drill through your line" },
+        { "unit": "Mustang", "reason": "Splash damage punishes tightly packed light vehicles" },
+        { "unit": "Hound", "reason": "AoE cannon efficiently clears cheap ground chaff" }
+      ],
+      "counteredBy": [
+        { "unit": "Marksman", "reason": "Outranges and picks off Arclights with high single-target damage" },
+        { "unit": "Stormcaller", "reason": "Long-range rocket barrages destroy them before they contribute" },
+        { "unit": "Rhino", "reason": "Charges through the chaff screen and crushes them in melee" },
+        { "unit": "Overlord", "reason": "Arclight has no anti-air and dies helplessly to air attacks" },
+        { "unit": "Phoenix", "reason": "Flies over the line and snipes Arclights, which cannot shoot back" },
+        { "unit": "Wraith", "reason": "Air unit it cannot target, free to beam it down" },
+        { "unit": "Fortress", "reason": "Too much HP and damage for Arclight's modest single-target output" },
+        { "unit": "Scorpion", "reason": "Outranges and out-damages it with heavy siege fire" }
+      ],
+      "tips": [
+        "Buy Range Enhancement early so Arclights stay back and don't die before finishing their job of clearing enemy chaff.",
+        "Pair Arclights with Stormcallers — Stormcallers are good against everything Arclights are weak to.",
+        "Don't build Arclights into Fangs once shield tech is on the table; they're a Crawler answer. And don't tech Anti-Aircraft — build dedicated anti-air like Mustangs instead.",
+        "Charged Shot (300) is the pickup against Steel Ball/Sledgehammer pushes; Armor Enhancement (150) is worth it when they're holding a flank."
+      ]
+    },
+    {
+      "id": "crawler",
+      "name": "Crawler",
+      "emoji": "🕷️",
+      "cost": 100,
+      "type": "ground",
+      "giant": false,
+      "description": "Cheap, extremely fast melee swarm unit and arguably the most versatile unit in the game. Used for early pressure, flanking, distracting enemy fire, and as a late-game carry with aggressive tech builds.",
+      "counters": [
+        { "unit": "Fang", "reason": "Swarms and overwhelms fragile ranged chaff before it can deal meaningful damage" },
+        { "unit": "Marksman", "reason": "Fast melee rush closes distance and shreds slow-firing single-target snipers", "strength": 3 },
+        { "unit": "Hacker", "reason": "Reaches and destroys the fragile Hacker before it can convert valuable targets" },
+        { "unit": "Melting Point", "reason": "Melting Point's slow-ramping beam can't handle dozens of small fast bodies", "strength": 3 },
+        { "unit": "Steel Ball", "reason": "Mass of cheap bodies harasses and overwhelms the single-target drill damage" },
+        { "unit": "Stormcaller", "reason": "Fast flanking Crawlers reach the fragile artillery before rockets can thin them out" },
+        { "unit": "Scorpion", "reason": "Slow single-target siege unit gets swarmed and torn down by sheer numbers" },
+        { "unit": "Sandworm", "reason": "Chaff pins the worm in place and prevents its burrow cycles" }
+      ],
+      "counteredBy": [
+        { "unit": "Arclight", "reason": "Standard early-game counter; splash cannon wipes out whole packs of Crawlers", "strength": 3 },
+        { "unit": "Vulcan", "reason": "Flamethrower area damage incinerates entire swarms almost instantly", "strength": 3 },
+        { "unit": "Fire Badger", "reason": "Fire and burn damage melts massed light units" },
+        { "unit": "Sledgehammer", "reason": "Durable splash-damage tank that absorbs the swarm and clears it efficiently" },
+        { "unit": "Wraith", "reason": "Multi-target attacks mean the swarm cannot block or soak the Wraith's damage" },
+        { "unit": "Typhoon", "reason": "Rapid multi-hit area fire chews through large numbers of cheap units" },
+        { "unit": "Tarantula", "reason": "Area damage and sturdy frame handle massed Crawlers well" }
+      ],
+      "tips": [
+        "Put tanky units like Sledgehammers or Steel Balls in front so Crawlers reach the enemy without eating counter-fire, or flank from the sides — even backline Crawlers reach combat quickly.",
+        "Replicate (250) is one of the best techs in the game, but don't buy it before your free-unit card drops or you risk getting hard countered while over-committed.",
+        "Impact Drill wins Crawler mirror/replicate wars and cracks leveled towers; Mechanical Rage is the go-to final carry tech.",
+        "Drip-feed Crawlers into the fight to screen your high-value units, and sell isolated stragglers so an enemy with Replicate can't farm them for free units."
+      ]
+    },
+    {
+      "id": "fang",
+      "name": "Fang",
+      "emoji": "🏹",
+      "cost": 100,
+      "type": "ground",
+      "giant": false,
+      "description": "Cheap ranged chaff squad whose main job is to distract enemy fire and screen valuable units. With Portable Shield tech they become extremely durable damage sponges that can lock down slow single-target attackers.",
+      "counters": [
+        { "unit": "Sledgehammer", "reason": "Shielded Fangs lock down slow single-target damage dealers, which get stuck on them for ages" },
+        { "unit": "Arclight", "reason": "Once shielded, Fangs absorb Arclight shots and outlast its splash damage", "strength": 1 },
+        { "unit": "Melting Point", "reason": "Ignite tech and massed cheap bodies whittle down giants while soaking their expensive shots" },
+        { "unit": "Rhino", "reason": "A wall of shielded Fangs stalls the charge and buys time for your damage dealers", "strength": 1 },
+        { "unit": "Phoenix", "reason": "Cheap anti-air chaff punishes over-teched or over-built Phoenixes early" },
+        { "unit": "Wasp", "reason": "Cheap massed anti-air chaff trades very efficiently against them" }
+      ],
+      "counteredBy": [
+        { "unit": "Crawler", "reason": "Faster melee swarm closes in and shreds Fangs in the early game" },
+        { "unit": "Mustang", "reason": "High rate-of-fire packs, especially with High-Explosive Ammo, mow Fangs down" },
+        { "unit": "Stormcaller", "reason": "Rocket barrages splash whole Fang squads off the board" },
+        { "unit": "Vulcan", "reason": "Flame area damage burns through even shielded Fangs", "strength": 3 },
+        { "unit": "Typhoon", "reason": "Sustained multi-target fire clears massed Fangs efficiently" },
+        { "unit": "Tarantula", "reason": "Area damage handles large groups of cheap infantry" }
+      ],
+      "tips": [
+        "Build Fangs early if you plan to buy Portable Shield (their key tech) — the shield doubles their effective HP and gives huge late-game value as a screen.",
+        "Their slow movement is actually a feature: they naturally stay in front of your critical units and protect them, so position them ahead of your carries.",
+        "Avoid carry-Fang builds — Range Enhancement and Armor-Piercing Bullets are traps; Fangs are a utility/screening unit, not a damage carry.",
+        "Ignite is a strong pickup against giant-heavy boards, and Mechanical Rage works with Fortress fang-summoning synergies."
+      ]
+    },
+    {
+      "id": "hound",
+      "name": "Hound",
+      "emoji": "🐕",
+      "cost": 100,
+      "type": "ground",
+      "giant": false,
+      "description": "Cheap, quick ground unit that clears enemy chaff and provides extra bodies to soak damage, helping your bigger units connect faster. Levels well and can outgrow its support role to threaten medium units.",
+      "counters": [
+        { "unit": "Crawler", "reason": "Efficiently guns down light melee swarms before they reach your line" },
+        { "unit": "Fang", "reason": "Quickly clears cheap ranged chaff and screens your carries from it" }
+      ],
+      "counteredBy": [
+        { "unit": "Vulcan", "reason": "One of the best answers to Hound aggression; flame AoE wipes packs instantly", "strength": 3 },
+        { "unit": "Wraith", "reason": "Top counter to aggressive Hound play thanks to multi-target beam damage", "strength": 3 },
+        { "unit": "Fire Badger", "reason": "Fire area damage burns down massed cheap units" },
+        { "unit": "Typhoon", "reason": "Sustained multi-hit fire shreds groups of Hounds" },
+        { "unit": "Rhino", "reason": "Charges through and crushes light units on impact" },
+        { "unit": "Sandworm", "reason": "Devours cheap ground chaff wholesale" }
+      ],
+      "tips": [
+        "Deploy Hounds early even without tech — they level fast, and with levels they break out of the chaff role and start clearing bigger units.",
+        "Tech priority: Range Enhancement first, then Mechanical Rage for attack speed; Fire Extinguisher (200) is a cheap defensive buy that protects nearby allies from burn damage.",
+        "They pair excellently with Overlords, Raidens, and War Factories as the screening/chaff-clear component of a premium late-game composition.",
+        "Don't rely on Incendiary Bomb early — a single anti-missile device stops a Hound from igniting its oil, neutering the tech."
+      ]
+    },
+    {
+      "id": "fire-badger",
+      "name": "Fire Badger",
+      "emoji": "🦡",
+      "cost": 200,
+      "type": "ground",
+      "giant": false,
+      "description": "A cheap flamethrower tank that soaks damage on the frontline and demolishes chaff with cone-shaped fire. Plays like a Sledgehammer that trades single-target punch for anti-swarm burn.",
+      "counters": [
+        { "unit": "Crawler", "reason": "Flame cone absolutely demolishes crawler swarms without needing any tech", "strength": 3 },
+        { "unit": "Fang", "reason": "Burns down Fang clusters, though Range Enhancement helps it connect first" },
+        { "unit": "Mustang", "reason": "With positioning and range tech it can roast Mustang packs" }
+      ],
+      "counteredBy": [
+        { "unit": "Marksman", "reason": "Outranges the very short-ranged Badger and kills it before it fires" },
+        { "unit": "Fortress", "reason": "Too much HP for fire damage to matter and crushes Badgers up close" },
+        { "unit": "Rhino", "reason": "Charges through the flames and smashes the Badger in melee" },
+        { "unit": "Overlord", "reason": "Heavy ranged strikes from a unit the Badger cannot answer" },
+        { "unit": "Raiden", "reason": "Deletes medium flame units from beyond their effective range" },
+        { "unit": "Phantom Ray", "reason": "Strong air matchup against medium flame units that struggle to hit air" },
+        { "unit": "Sabertooth", "reason": "Tanks the flames and wins the head-on trade" }
+      ],
+      "tips": [
+        "Field Maintenance (+30% HP and regen) is its best tech — it turns the Badger into a real damage soaker.",
+        "Use it as a flanker when the enemy stacks units in a corner; the fire cone hits everything bunched together.",
+        "Its range is terrible — buy Range Enhancement if the enemy kites, and skip Ignite (low practical value).",
+        "Scorching Fire (+125% attack) lets it threaten medium units, not just chaff."
+      ]
+    },
+    {
+      "id": "marksman",
+      "name": "Marksman",
+      "emoji": "🎯",
+      "cost": 200,
+      "type": "ground",
+      "giant": false,
+      "description": "Long-range sniper that deletes medium and large single targets, dominating passive range-war openings. Strong in the early-to-mid game but falls off as a primary late-game carry.",
+      "counters": [
+        { "unit": "Phoenix", "reason": "One high-damage shot swats fragile air units, especially with Aerial Specialization" },
+        { "unit": "Overlord", "reason": "Long-range high-damage shots punish big expensive air", "strength": 3 },
+        { "unit": "Vulcan", "reason": "Snipes the flame tank from far outside its short range" },
+        { "unit": "Arclight", "reason": "Outranges and out-damages it in the poke war" },
+        { "unit": "Sledgehammer", "reason": "High single-shot damage cracks medium armor efficiently" },
+        { "unit": "Steel Ball", "reason": "Kills the balls at range before they ever reach your line" },
+        { "unit": "Wraith", "reason": "High single-target range damage, especially with Aerial Specialization, deletes Wraiths", "strength": 3 },
+        { "unit": "Raiden", "reason": "Cheap long-range single-target damage picks off the expensive Raiden efficiently" },
+        { "unit": "Phantom Ray", "reason": "High single-shot damage ignores the value of armor; a few Marksmen handle early Phantom Rays" },
+        { "unit": "Melting Point", "reason": "Snipes the fragile beam platform from long range" },
+        { "unit": "Tarantula", "reason": "High single-target damage picks the big frame apart from range" },
+        { "unit": "Fire Badger", "reason": "Outranges the very short-ranged Badger and kills it before it fires" }
+      ],
+      "counteredBy": [
+        { "unit": "Crawler", "reason": "Swarm closes in fast and slow-firing snipers can't thin it out", "strength": 3 },
+        { "unit": "Fang", "reason": "Massed cheap bodies waste its expensive single-target shots" },
+        { "unit": "Stormcaller", "reason": "Two early Stormcallers can neutralize Marksmen with rocket splash" },
+        { "unit": "Wasp", "reason": "Air swarm dives them and each shot only kills one cheap Wasp" },
+        { "unit": "Rhino", "reason": "Flank charges reach the backline and crush the fragile snipers" },
+        { "unit": "Fortress", "reason": "Too much bulk to snipe down while it advances and spawns chaff" },
+        { "unit": "Sandworm", "reason": "Untargetable while burrowed, so single-shot snipers waste their damage" }
+      ],
+      "tips": [
+        "Only build Marksmen early when your cards justify it — you cannot transition into them late game; at that point Phoenix is the better buy.",
+        "Cap at 4-5 Marksmen; beyond that effectiveness plateaus and the mass becomes exploitable by flanks and swarms.",
+        "Range Enhancement is the first tech in about 90% of games, then Elite Marksman for scaling; take Aerial Specialization for a dedicated anti-air build.",
+        "Always screen them with chaff — an unprotected Marksman line folds instantly to Crawler swarms or a Rhino flank."
+      ]
+    },
+    {
+      "id": "mustang",
+      "name": "Mustang",
+      "emoji": "🚙",
+      "cost": 200,
+      "type": "ground",
+      "giant": false,
+      "description": "Fast, versatile pack of light vehicles with rapid ranged fire that doubles as anti-air. A solid all-rounder that covers flanks early and scales into a late-game threat with levels and items.",
+      "counters": [
+        { "unit": "Fang", "reason": "High rate of fire mows down cheap infantry squads" },
+        { "unit": "Crawler", "reason": "Explosive Ammo and rapid fire clear melee swarms before they connect" },
+        { "unit": "Wasp", "reason": "Cheap, reliable anti-air that shreds squishy air swarms early", "strength": 3 },
+        { "unit": "Phoenix", "reason": "Massed anti-air fire brings down fragile fliers cost-efficiently", "strength": 3 },
+        { "unit": "Overlord", "reason": "With Aerial Specialization, massed Mustangs melt big air units" }
+      ],
+      "counteredBy": [
+        { "unit": "Arclight", "reason": "Splash damage wipes whole Mustang packs at range" },
+        { "unit": "Sledgehammer", "reason": "Armor tech negates Mustang's low per-shot damage almost entirely" },
+        { "unit": "Stormcaller", "reason": "Long-range rocket splash lands on clustered Mustang packs" },
+        { "unit": "Vulcan", "reason": "Tanky flame unit absorbs their fire and burns the pack down" },
+        { "unit": "Fortress", "reason": "Big armored unit shrugs off small-arms fire and locks Mustangs down" },
+        { "unit": "Rhino", "reason": "Charges into the pack and crushes it while soaking the shots" },
+        { "unit": "Fire Badger", "reason": "Burn AoE counters massed light vehicles" },
+        { "unit": "Typhoon", "reason": "Out-trades them with multi-target sustained area fire" },
+        { "unit": "Tarantula", "reason": "Cheap Armor Enhancement makes it a great answer to Mustang-heavy boards" },
+        { "unit": "Phantom Ray", "reason": "Armor technology absorbs rapid low-damage shots, making Mustang volleys nearly useless", "strength": 3 }
+      ],
+      "tips": [
+        "Deploy Mustangs on your flanks even when pushing centrally — their speed lets them cover side attacks and provide constant anti-air coverage.",
+        "Range Enhancement (300) is the essential first tech for survivability and faster leveling; add Armor-Piercing Bullets for late-game armor matchups and Aerial Specialization when facing 3+ air units.",
+        "Cap your investment at roughly 3-4 packs — over-committing makes you a liability once the opponent techs armor, shields, or big units.",
+        "Pair them with Hackers, Fortresses, Steel Balls, or Rhinos to give them a frontline; naked Mustang masses fold to armor tech."
+      ]
+    },
+    {
+      "id": "sledgehammer",
+      "name": "Sledgehammer",
+      "emoji": "🔨",
+      "cost": 200,
+      "type": "ground",
+      "giant": false,
+      "description": "Cheap armored tank with splash cannon fire that serves as the early-game chaff clearer and a frontline damage sponge for bigger units later. Excellent value that stays relevant all game in a support role.",
+      "counters": [
+        { "unit": "Crawler", "reason": "Splash shots and armor make it very good versus Crawlers all game" },
+        { "unit": "Fang", "reason": "AoE fire clears unshielded Fang squads efficiently" },
+        { "unit": "Mustang", "reason": "With Armor Enhancement tech it nullifies Mustang damage almost completely" },
+        { "unit": "Stormcaller", "reason": "With missile interception it walls out Stormcaller damage" }
+      ],
+      "counteredBy": [
+        { "unit": "Marksman", "reason": "High-damage sniper shots crack its armor from long range" },
+        { "unit": "Scorpion", "reason": "Heavy siege damage deletes medium armor" },
+        { "unit": "Fortress", "reason": "Out-tanks and out-damages it in the frontline brawl" },
+        { "unit": "Overlord", "reason": "Heavy air attacks it cannot answer" },
+        { "unit": "Phoenix", "reason": "Air sniper picks off Sledgehammers with impunity" },
+        { "unit": "Hacker", "reason": "Converts the cheap frontline into an enemy asset" },
+        { "unit": "Rhino", "reason": "Charge damage smashes through medium armor" },
+        { "unit": "War Factory", "reason": "Giant output overwhelms its modest DPS and HP" },
+        { "unit": "Melting Point", "reason": "Damage Sharing tech plus the ramping beam melts sledge lines" },
+        { "unit": "Raiden", "reason": "High per-bolt damage one-shots medium units, hitting three targets at once" },
+        { "unit": "Phantom Ray", "reason": "Good sustained damage against medium units that cannot shoot back at air" }
+      ],
+      "tips": [
+        "Often correct NOT to level Sledgehammers — level 1 sledges clear chaff nearly as well, and counters overkill them anyway, so spend the supply elsewhere.",
+        "Tech priority is roughly: Field Maintenance most games, Armor Enhancement against Mustang/light-fire boards, and almost never Damage Sharing or carry techs.",
+        "Avoid carry-sledge builds (Range/EMP/Mech Rage) — they're easily shut down; keep Sledgehammers in the chaff-clear and frontline-tank role.",
+        "Against Steel Balls, deploy sledges vertically in a column so all the balls waste time drilling the first sledge; beware shielded Fangs, which sledges get stuck on forever."
+      ]
+    },
+    {
+      "id": "steel-ball",
+      "name": "Steel Ball",
+      "emoji": "🔩",
+      "cost": 200,
+      "type": "ground",
+      "giant": false,
+      "description": "A durable anti-giant brawler that rolls up to big targets and melts them with a close-range beam. Works as a reactive frontline pick that tanks for backline damage dealers and snowballs hard once leveled with items.",
+      "counters": [
+        { "unit": "Melting Point", "reason": "The hard counter — tanks the beam while Energy Absorption feeds off it", "strength": 3 },
+        { "unit": "Fortress", "reason": "Shreds large high-HP units at close range" },
+        { "unit": "Rhino", "reason": "The standard defensive answer — tanks the charge and melts the Rhino", "strength": 3 },
+        { "unit": "Vulcan", "reason": "Ignores chaff-clearing damage profile and burns it down up close" },
+        { "unit": "War Factory", "reason": "Excellent single-target beam damage against the biggest giant" },
+        { "unit": "Typhoon", "reason": "Tanks through the Typhoon's fire and is very good against its Barrier tech" },
+        { "unit": "Fire Badger", "reason": "Tanky enough to shrug off flame damage while killing it" }
+      ],
+      "counteredBy": [
+        { "unit": "Scorpion", "reason": "The most universal answer; early Scorpion drops stop Steel Balls from leveling", "strength": 3 },
+        { "unit": "Crawler", "reason": "Swarms overwhelm its slow single-target attack" },
+        { "unit": "Hacker", "reason": "Converts the slow, expensive ball into your problem" },
+        { "unit": "Phoenix", "reason": "Flies over it and picks it off from range" },
+        { "unit": "Overlord", "reason": "Heavy air damage it cannot answer" },
+        { "unit": "Stormcaller", "reason": "Long-range missile barrages hit it before it reaches anything" },
+        { "unit": "Raiden", "reason": "Long-range lightning kills Steel Balls before they can roll into your lines" },
+        { "unit": "Farseer", "reason": "Kills Steel Balls before they reach your front line" },
+        { "unit": "Sabertooth", "reason": "High damage-per-shot brings balls down before they ramp" }
+      ],
+      "tips": [
+        "Avoid Steel Balls as opening units — free Scorpion drops punish them early; deploy them as a reaction to enemy giants instead.",
+        "Mechanical Division (350) is the must-have tech — the crawlers spawned on death add chaff and pressure; Energy Absorption (200) is great versus giants and barriers.",
+        "Level them and give them items — a leveled, itemized Steel Ball frontline is extremely hard to remove; pair with Photon Overlords for extra durability.",
+        "Watch for vertical Fang walls, Charged Shot Arclights and sentry missiles — opponents use these to gather and stall your balls before they connect."
+      ]
+    },
+    {
+      "id": "stormcaller",
+      "name": "Stormcaller",
+      "emoji": "🚀",
+      "cost": 200,
+      "type": "ground",
+      "giant": false,
+      "description": "A fragile long-range rocket artillery unit that saturates an area with missiles. Among the best units when unopposed — it deletes low-HP squads, stationary units and shields from far behind the frontline.",
+      "counters": [
+        { "unit": "Fang", "reason": "Low-HP squads get melted by missile volleys" },
+        { "unit": "Mustang", "reason": "Fragile squad units die to the AoE barrage" },
+        { "unit": "Sledgehammer", "reason": "Slow-moving squads get pounded before they close the distance" },
+        { "unit": "Marksman", "reason": "Stationary backline units are easy targets for long-range missiles" },
+        { "unit": "Arclight", "reason": "Slow units can't dodge the barrage and get chipped down" }
+      ],
+      "counteredBy": [
+        { "unit": "Crawler", "reason": "Cheap chaff absorbs missiles and rushes the fragile launchers" },
+        { "unit": "Phoenix", "reason": "Jumps or flies over the frontline and kills the launchers directly" },
+        { "unit": "Overlord", "reason": "Closes in from the air and deletes the fragile artillery" },
+        { "unit": "Rhino", "reason": "Charges through the frontline and tramples the launchers" },
+        { "unit": "Sabertooth", "reason": "Missile Interceptor tech shoots the volleys out of the sky" },
+        { "unit": "War Factory", "reason": "Missile interception and huge HP make barrages nearly useless", "strength": 3 },
+        { "unit": "Sandworm", "reason": "Burrows under artillery barrages and Sandstorm blunts long-range damage" },
+        { "unit": "Raiden", "reason": "Outranges and snipes fragile artillery in the backline" },
+        { "unit": "Phantom Ray", "reason": "Flies over the front line and destroys fragile artillery" },
+        { "unit": "Abyss", "reason": "Its durability shrugs off missiles while it closes in and destroys the artillery line" }
+      ],
+      "tips": [
+        "2-4 packs early is fine, but don't over-commit — avoid heavy levels or items on them, since anti-missile tech turns the investment into dead supply.",
+        "High-Explosive Ammo (200) is the cheap chaff-clear upgrade to buy first; Electromagnetic Explosion (300) is strong versus War Factory and Melting Point.",
+        "Never buy Armor-Piercing Bullets — it makes your missiles easier to intercept for no real gain.",
+        "Don't rely on Stormcallers as your only chaff clear late game; missile interceptor devices and interception tech will blank your whole damage output."
+      ]
+    },
+    {
+      "id": "wasp",
+      "name": "Wasp",
+      "emoji": "🐝",
+      "cost": 200,
+      "type": "air",
+      "giant": false,
+      "description": "Cheap, squishy air swarm that punishes boards lacking anti-air and is the perfect counter to mass Overlord or Wraith strategies. Extremely flexible harasser and flank defender that scales well into the late game.",
+      "counters": [
+        { "unit": "Marksman", "reason": "Ignores ground lines and dives leveled Marksmen that lack anti-air support" },
+        { "unit": "Melting Point", "reason": "Free damage onto expensive ground giants that often can't shoot back" },
+        { "unit": "Overlord", "reason": "Swarm of anti-air attacks is the classic answer to mass Overlord", "strength": 3 },
+        { "unit": "Wraith", "reason": "With Aerial Specialization and range, Wasps out-trade Wraith strategies" },
+        { "unit": "Vulcan", "reason": "Attacks from the air while the Vulcan's flames can't reach them" },
+        { "unit": "Phoenix", "reason": "Aerial Specialization lets massed Wasps win the air-to-air fight" },
+        { "unit": "Abyss", "reason": "Air swarms attack from above where its ground-focused attacks have little answer" }
+      ],
+      "counteredBy": [
+        { "unit": "Mustang", "reason": "The premier early anti-air; rapid fire shreds squishy Wasps", "strength": 3 },
+        { "unit": "Fortress", "reason": "With Anti-Air Barrage it fends off Wasps while also tanking the front" },
+        { "unit": "Fang", "reason": "Cheap massed anti-air chaff trades very efficiently against them" },
+        { "unit": "Wraith", "reason": "Multi-target air-to-air damage clears Wasp swarms if they lack range/aerial tech" },
+        { "unit": "Typhoon", "reason": "Sustained multi-target flak chews through the swarm" },
+        { "unit": "Tarantula", "reason": "Clears fragile air swarms while tanking their damage" },
+        { "unit": "Farseer", "reason": "Its anti-air output clears Wasp swarms efficiently" }
+      ],
+      "tips": [
+        "Buy Jump Drive (50) almost always as the first upgrade — repositioning between rounds keeps Wasps unpredictable and lets them defend a flank then rejoin the main fight.",
+        "Aerial Specialization (200) is mandatory before committing into Wasps when the opponent has air; Range Enhancement (300) is required for carry builds but buying it too early telegraphs your plan.",
+        "Use them as flank defenders and harassers targeting gaps in the enemy line; clever placement can even tank sentry-missile splash to protect ground units behind them.",
+        "Don't rely on Energy Shield to fix their squishiness — opponents just build Mustangs and the shield barely matters."
+      ]
+    },
+    {
+      "id": "farseer",
+      "name": "Farseer",
+      "emoji": "🔮",
+      "cost": 300,
+      "type": "air",
+      "giant": true,
+      "description": "A flexible do-it-all flying giant that provides mid-game power, decent chaff clear, and anti-air, while its EMP shuts down key enemy units. Strong in rounds 3-5 but falls off against dedicated late-game units.",
+      "counters": [
+        { "unit": "Wasp", "reason": "Its anti-air output clears Wasp swarms efficiently" },
+        { "unit": "Wraith", "reason": "Can shoot down and EMP-disable enemy Wraiths" },
+        { "unit": "Sledgehammer", "reason": "Good damage against clustered medium ground units" },
+        { "unit": "Steel Ball", "reason": "Kills Steel Balls before they reach your front line" },
+        { "unit": "Overlord", "reason": "Protects you from Overlord rush cheese by contesting the air early" }
+      ],
+      "counteredBy": [
+        { "unit": "Fortress", "reason": "Too much health for the Farseer's damage to handle as the game goes on" },
+        { "unit": "Rhino", "reason": "Charges through to the backline where Farseer's damage cannot stop it" },
+        { "unit": "War Factory", "reason": "Massive durable giant that Farseer cannot meaningfully damage" },
+        { "unit": "Melting Point", "reason": "Ramping beam damage destroys expensive flying giants" }
+      ],
+      "tips": [
+        "Build only 1-2 Farseers as a mid-game power spike; massing them loses to better units later in the game.",
+        "Skip range technology on it; the tech investment creates a resource disadvantage.",
+        "EMP tech is cheap and sometimes worth it to disable enemy Vulcans, Wraiths, or Melting Points when pushing.",
+        "Use it as insurance against random cheese plays like Overlord rushes rather than as a long-term carry."
+      ]
+    },
+    {
+      "id": "hacker",
+      "name": "Hacker",
+      "emoji": "📡",
+      "cost": 300,
+      "type": "ground",
+      "giant": false,
+      "description": "A support unit that converts enemy units to your side. High-risk, high-reward: it either steals something expensive or continuously steals small units that distract the opponent's whole army.",
+      "counters": [
+        { "unit": "Steel Ball", "reason": "Hacking a leveled ball flips the tempo, but you need a same-level Hacker to hack reliably" },
+        { "unit": "Sledgehammer", "reason": "Cheap medium units are hacked quickly and clog the enemy push" },
+        { "unit": "Rhino", "reason": "Hacks the charging unit early and turns it around, controlling its aggression" },
+        { "unit": "Scorpion", "reason": "Gets distracted by hacked units and just spins around instead of dealing damage" },
+        { "unit": "Melting Point", "reason": "Wastes its ramping beam retargeting hacked chaff" },
+        { "unit": "Arclight", "reason": "Too slow at clearing hacked units, so the distraction keeps working" },
+        { "unit": "Sabertooth", "reason": "One hack steals a large, expensive frontliner" }
+      ],
+      "counteredBy": [
+        { "unit": "Crawler", "reason": "Cheap swarms reach and kill the fragile Hacker; hacking one Crawler barely matters" },
+        { "unit": "Fang", "reason": "Chaff overwhelms it and each hack steals almost no value" },
+        { "unit": "Stormcaller", "reason": "Long-range barrages kill the fragile Hacker before it pays off" },
+        { "unit": "Mustang", "reason": "Fast chaff clear kills hacked units before they distract anything" },
+        { "unit": "Vulcan", "reason": "Instantly burns down hacked chaff, nullifying the distraction plan" },
+        { "unit": "Overlord", "reason": "Barrier tech and heavy fire shut the Hacker down" },
+        { "unit": "Fortress", "reason": "Shielded and too valuable to trade into; produces chaff that screens it" },
+        { "unit": "Wraith", "reason": "Multi-target damage clears hacked units and threatens the Hacker itself" },
+        { "unit": "Phantom Ray", "reason": "Kills Hackers while armor mitigates incoming damage" }
+      ],
+      "tips": [
+        "Buy Range Enhancement (300) almost always — it lets the Hacker sit safely behind your army and survive.",
+        "Barriers hard-counter hacking; pair Hackers with shield-breakers like Stormcallers and answer enemy barrier tech early.",
+        "Don't pair Hackers with strong single-target damage — your own Marksmen or Phoenixes will kill the target before the hack completes.",
+        "Multiple Control (250) is only good against chaff boards; it fails against high-level units. Late game, kill your own hacked units quickly before the enemy reclaims value."
+      ]
+    },
+    {
+      "id": "phantom-ray",
+      "name": "Phantom Ray",
+      "emoji": "🛸",
+      "cost": 300,
+      "type": "air",
+      "giant": true,
+      "description": "A durable flying unit that serves as the frontline for your air army. With armor technology it blanks rapid-fire units while dealing good damage to medium-sized ground units.",
+      "counters": [
+        { "unit": "Mustang", "reason": "Armor technology absorbs rapid low-damage shots, making Mustang volleys nearly useless", "strength": 3 },
+        { "unit": "Sledgehammer", "reason": "Good sustained damage against medium units that cannot shoot back at air" },
+        { "unit": "Steel Ball", "reason": "Attacks from the air while taking little in return from medium units" },
+        { "unit": "Stormcaller", "reason": "Flies over the front line and destroys fragile artillery" },
+        { "unit": "Hacker", "reason": "Kills Hackers while armor mitigates incoming damage" },
+        { "unit": "Fire Badger", "reason": "Strong matchup against medium flame units that struggle to hit air" },
+        { "unit": "Wraith", "reason": "Trades favorably as an armored air frontliner against enemy air" }
+      ],
+      "counteredBy": [
+        { "unit": "Marksman", "reason": "High single-shot damage ignores the value of armor; a few Marksmen deal with early Phantom Rays" },
+        { "unit": "Phoenix", "reason": "Big single-target hits punch straight through armor" },
+        { "unit": "Overlord", "reason": "Massed Overlords and anti-air overwhelm multiple Phantom Rays" },
+        { "unit": "Melting Point", "reason": "Ramping beam (especially with Energy Absorption) melts armored air units" },
+        { "unit": "Raiden", "reason": "High-damage lightning bolts are not mitigated well by armor" },
+        { "unit": "Farseer", "reason": "Anti-air giant that contests it directly in the air" }
+      ],
+      "tips": [
+        "Buy it primarily to counter enemy Mustang masses, taking armor technology first.",
+        "After armor wins that fight, add shield technology to defend against the Phoenix and Marksman response.",
+        "Avoid overcommitting to fast-shooting units yourself early, or you invite the same armor-based counter.",
+        "If facing enemy Phantom Rays, respond with a few Marksmen or Phoenixes early, or Energy Absorption Melting Points and missile-interceptor Mustangs later."
+      ]
+    },
+    {
+      "id": "phoenix",
+      "name": "Phoenix",
+      "emoji": "🦅",
+      "cost": 300,
+      "type": "air",
+      "giant": false,
+      "description": "A mobile air unit (2 per pack) firing high single-target damage shots, excellent at early harassment and flanking. With Jump Drive it teleports across the board to assassinate artillery and giants in the enemy backline.",
+      "counters": [
+        { "unit": "Stormcaller", "reason": "Flies or jumps past the frontline and kills the fragile launchers", "strength": 3 },
+        { "unit": "Arclight", "reason": "Ground-only unit that can't shoot back at air" },
+        { "unit": "Vulcan", "reason": "Big ground target with no anti-air answer" },
+        { "unit": "Rhino", "reason": "Charged Shot deletes it and it can't retaliate against air" },
+        { "unit": "Overlord", "reason": "High single-target damage picks off expensive air giants" },
+        { "unit": "Sabertooth", "reason": "No anti-air, so Phoenixes kill it for free" },
+        { "unit": "Scorpion", "reason": "Instantly connects to big backline units and bursts them down" },
+        { "unit": "Typhoon", "reason": "Repositions to focus down the big single target" },
+        { "unit": "Fire Badger", "reason": "Ground unit with no way to hit air" },
+        { "unit": "Wraith", "reason": "Charged Shot Phoenixes burst the big air target down" },
+        { "unit": "Sandworm", "reason": "Charged shot deals enough burst to kill it during its surface window" },
+        { "unit": "Sledgehammer", "reason": "Air sniper picks off Sledgehammers with impunity" },
+        { "unit": "Steel Ball", "reason": "Flies over it and picks it off from range" },
+        { "unit": "Phantom Ray", "reason": "Big single-target hits punch straight through armor" },
+        { "unit": "Raiden", "reason": "Air-to-air single-target damage trades very well against it" },
+        { "unit": "Abyss", "reason": "High single-target air damage strikes it while staying hard for it to answer" },
+        { "unit": "Melting Point", "reason": "Snipes the fragile beam platform while flying out of its reach" },
+        { "unit": "Tarantula", "reason": "Air harassment it has no good response to" }
+      ],
+      "counteredBy": [
+        { "unit": "Mustang", "reason": "Massed anti-air fire shreds the fragile pairs", "strength": 3 },
+        { "unit": "Fang", "reason": "Cheap anti-air chaff punishes over-teched or over-built Phoenixes early" },
+        { "unit": "Marksman", "reason": "Long-range single-target shots two-tap Phoenixes" },
+        { "unit": "Wasp", "reason": "Swarming air-to-air unit that trades up against them" },
+        { "unit": "Fortress", "reason": "Anti-Air Barrage connects to Phoenixes even with units in front" }
+      ],
+      "tips": [
+        "Jump Drive (50) is the best Phoenix tech — buy it almost always and use aggressive flank placements to reach the enemy backline.",
+        "Electromagnetic Shot (200) guarantees hits and locks down Fortresses and Melting Points; Charged Shot (200) is great versus shields, Rhinos and Wraiths.",
+        "Don't overcommit early — if you tech too fast or build too many, cheap anti-air like Fangs and Mustangs punishes you hard.",
+        "Prefer aggressive positioning over Range Enhancement, but place short-range builds carefully so they don't fly into massed anti-air."
+      ]
+    },
+    {
+      "id": "raiden",
+      "name": "Raiden",
+      "emoji": "⛈️",
+      "cost": 300,
+      "type": "air",
+      "giant": true,
+      "description": "A flying backline carry, often described as a flying Scorpion, that fires three lightning bolts at long range. It struggles early but scales hard with levels, range, and items against medium-unit compositions.",
+      "counters": [
+        { "unit": "Sledgehammer", "reason": "Its high per-bolt damage one-shots medium units, hitting three targets at once" },
+        { "unit": "Steel Ball", "reason": "Long-range lightning kills Steel Balls before they can roll into your lines" },
+        { "unit": "Stormcaller", "reason": "Outranges and snipes fragile artillery in the backline" },
+        { "unit": "Fire Badger", "reason": "Deletes medium flame units from beyond their effective range" }
+      ],
+      "counteredBy": [
+        { "unit": "Marksman", "reason": "Cheap long-range single-target damage picks off the expensive Raiden efficiently" },
+        { "unit": "Phoenix", "reason": "Air-to-air single-target damage trades very well against it" },
+        { "unit": "Overlord", "reason": "Heavy anti-air firepower punishes a Raiden-based backline" },
+        { "unit": "Farseer", "reason": "Anti-air capable giant that can EMP and shoot it down" },
+        { "unit": "Melting Point", "reason": "Ramping beam damage burns through the costly giant" }
+      ],
+      "tips": [
+        "Buy Raiden only after the opponent has overcommitted to medium units; it struggles heavily against chaff early on.",
+        "Prioritize Range Enhancement first for both safety and damage uptime.",
+        "Add Chain tech to arc onto backline counters, and consider Electromagnetic Shot late to disable counters once range and chain are in place.",
+        "Protect it with chaff clear elsewhere on the board, since it cannot efficiently clear Crawlers and Fangs on its own."
+      ]
+    },
+    {
+      "id": "rhino",
+      "name": "Rhino",
+      "emoji": "🦏",
+      "cost": 300,
+      "type": "ground",
+      "giant": false,
+      "description": "A fast melee bruiser that must be played aggressively: it charges the enemy line, draws fire for your damage dealers, and threatens towers via multi-directional flanks and mobile beacons.",
+      "counters": [
+        { "unit": "Stormcaller", "reason": "Charges through and tramples the fragile artillery", "strength": 3 },
+        { "unit": "Arclight", "reason": "Runs it down before its chip damage matters" },
+        { "unit": "Vulcan", "reason": "Closes distance fast and kills the big chaff-clearer in melee" },
+        { "unit": "Crawler", "reason": "Whirlwind tech is insane against multi-unit squads" },
+        { "unit": "Sledgehammer", "reason": "Whirlwind AoE shreds squad-based medium units" },
+        { "unit": "Marksman", "reason": "Reaches the backline and crushes stationary snipers" },
+        { "unit": "Mustang", "reason": "Whirlwind clears the fragile squads on contact" },
+        { "unit": "Fire Badger", "reason": "Tanks the flame damage and kills it up close" },
+        { "unit": "Typhoon", "reason": "Gets on top of it quickly and out-brawls it" },
+        { "unit": "Hound", "reason": "Charges through and crushes light units on impact" },
+        { "unit": "Farseer", "reason": "Charges through to the backline where Farseer's damage cannot stop it" }
+      ],
+      "counteredBy": [
+        { "unit": "Steel Ball", "reason": "The standard defensive answer — tanks the charge and melts the Rhino", "strength": 3 },
+        { "unit": "Melting Point", "reason": "Ramping beam kills the charging Rhino before it does its job" },
+        { "unit": "Fortress", "reason": "Too tanky to trample and hits back extremely hard" },
+        { "unit": "Hacker", "reason": "Hacks the Rhino early and turns your aggression against you" },
+        { "unit": "Phoenix", "reason": "Charged Shot Phoenixes burst it down while staying untouchable in the air" },
+        { "unit": "Overlord", "reason": "Kites the melee charger from the air" },
+        { "unit": "War Factory", "reason": "Shoots in all directions, walling off Rhino flanks" }
+      ],
+      "tips": [
+        "Deploy Rhinos in front of your damage dealers to soak aggro, or on wide flanks with a mobile beacon to hunt towers.",
+        "Whirlwind (250) is the go-to tech versus chaff; Power Armor (300) negates slows and is essential for tower rushes; Photon Coating (300) gives strong early damage reduction.",
+        "Against Final Blitz Rhinos, don't cluster your units — spread deployments so one death explosion can't chain through your army.",
+        "Don't over-rely on Armor Enhancement — opponents simply answer with Steel Balls or Melting Points; scout where enemy defenses are thin instead."
+      ]
+    },
+    {
+      "id": "abyss",
+      "name": "Abyss",
+      "emoji": "🌑",
+      "cost": 400,
+      "type": "ground",
+      "giant": true,
+      "description": "A late-game ground giant that devastates clustered ground armies with heavy area attacks. Its huge health pool and splash damage make it a powerful anchor, but it is slow and expensive.",
+      "counters": [
+        { "unit": "Crawler", "reason": "Area damage wipes out chaff swarms that try to surround it" },
+        { "unit": "Fang", "reason": "Splash attacks clear massed cheap infantry instantly" },
+        { "unit": "Sledgehammer", "reason": "Heavy area damage crushes clumped medium ground units" },
+        { "unit": "Stormcaller", "reason": "Its durability shrugs off missiles while it closes in and destroys the artillery line" }
+      ],
+      "counteredBy": [
+        { "unit": "Melting Point", "reason": "Ramping beam damage is the premier answer to any high-health giant", "strength": 3 },
+        { "unit": "Phoenix", "reason": "Air units with high single-target damage strike it while staying hard for it to answer" },
+        { "unit": "Wasp", "reason": "Air swarms attack from above where its ground-focused attacks have little answer" },
+        { "unit": "Farseer", "reason": "Flying giant that can chip it down and EMP-disable it from the air" }
+      ],
+      "tips": [
+        "Treat it as a late-game investment like other 400-cost giants; deploying it too early cripples your economy.",
+        "Aim it at the enemy's densest ground clumps so its area damage hits as many units as possible.",
+        "Expect a Melting Point response and pre-position chaff, Hackers, or EMP to protect it.",
+        "Pair it with dedicated anti-air, since air compositions are the safest way for opponents to play around it."
+      ]
+    },
+    {
+      "id": "sabertooth",
+      "name": "Sabertooth",
+      "emoji": "🐯",
+      "cost": 400,
+      "type": "ground",
+      "giant": false,
+      "description": "A rare heavy tank obtained only from free unit packs. A big early-game powerhouse when leveled with an item, it anchors your frontline and, with Missile Interceptor, doubles as anti-Stormcaller defense.",
+      "counters": [
+        { "unit": "Arclight", "reason": "Out-trades medium units with superior HP and firepower" },
+        { "unit": "Steel Ball", "reason": "High damage-per-shot brings balls down before they ramp" },
+        { "unit": "Stormcaller", "reason": "Missile Interceptor tech lets one Sabertooth blank roughly one Stormcaller" },
+        { "unit": "Fire Badger", "reason": "Tanks the flames and wins the head-on trade" },
+        { "unit": "Sledgehammer", "reason": "Crushes medium squad units in direct engagements" }
+      ],
+      "counteredBy": [
+        { "unit": "Melting Point", "reason": "Ramping beam removes the big single tank" },
+        { "unit": "Fortress", "reason": "Bigger tank that out-trades it head-on" },
+        { "unit": "Overlord", "reason": "Air unit it can't shoot; Launcher Overload beats its missile interception" },
+        { "unit": "Phoenix", "reason": "Flies over it and chips it down for free" },
+        { "unit": "Hacker", "reason": "One hack steals a large, expensive frontliner" },
+        { "unit": "Rhino", "reason": "Aggressive melee pressure it struggles to shake off" },
+        { "unit": "Crawler", "reason": "Chaff swarms overwhelm its slow, single-target shots" }
+      ],
+      "tips": [
+        "Only build extra Sabertooths when the enemy lacks chaff clear, runs medium units, or fields 2+ Stormcallers — otherwise use the free one for early value and sell it later.",
+        "Missile Interceptor (200) is the standout tech versus Stormcallers; Doubleshot (100) creates crazy tempo against giants.",
+        "Keep it on the frontline protected by your own chaff — skip Range Enhancement, screening bodies do that job better.",
+        "Don't rely on Missile Interceptor against Overlords once they can buy Launcher Overload — it will stop working."
+      ]
+    },
+    {
+      "id": "sandworm",
+      "name": "Sandworm",
+      "emoji": "🪱",
+      "cost": 400,
+      "type": "ground",
+      "giant": true,
+      "description": "A burrowing giant that dives underground between attacks, dodging fire while dealing heavy damage when it surfaces. Excels at protecting your army with Sandstorm and disrupting long-range compositions.",
+      "counters": [
+        { "unit": "Stormcaller", "reason": "Burrows under artillery barrages and Sandstorm blunts long-range damage" },
+        { "unit": "Marksman", "reason": "Untargetable while burrowed, so single-shot snipers waste their damage" },
+        { "unit": "Vulcan", "reason": "Surfaces on top of it and its Sandstorm-covered allies survive the fire" },
+        { "unit": "Steel Ball", "reason": "Heavy surfacing damage chews through slow medium units" },
+        { "unit": "Typhoon", "reason": "Dives under the sustained fire and crushes it on emergence" },
+        { "unit": "Hound", "reason": "Devours cheap ground chaff wholesale" }
+      ],
+      "counteredBy": [
+        { "unit": "War Factory", "reason": "Absolutely demolishes worms — too much HP and firepower to burrow-cycle against", "strength": 3 },
+        { "unit": "Melting Point", "reason": "Beam ramps up and burns through it whenever it surfaces" },
+        { "unit": "Phoenix", "reason": "Charged shot deals enough burst to kill it during its surface window" },
+        { "unit": "Overlord", "reason": "Ground cannon volleys hit hard the moment the worm emerges" },
+        { "unit": "Crawler", "reason": "Chaff pins the worm in place and prevents its burrow cycles" }
+      ],
+      "tips": [
+        "Sandstorm is the headline tech: 30% ranged damage reduction protects Wasps and your whole push.",
+        "Concentrate your firepower in one lane so the worm can keep burrow-cycling instead of getting pinned.",
+        "Replicate/Mechanical Division make worms snowball — larvae protect the original and multiply value.",
+        "Don't buy Anti-Air by default; the worm's job is protection and disruption, not air defense."
+      ]
+    },
+    {
+      "id": "scorpion",
+      "name": "Scorpion",
+      "emoji": "🦂",
+      "cost": 400,
+      "type": "ground",
+      "giant": true,
+      "description": "A heavy assault giant whose burst attack and acid specialize in deleting medium armor, shields, and summon-spam. The classic answer to Steel Balls and a solid early frontline tank.",
+      "counters": [
+        { "unit": "Steel Ball", "reason": "Its best use case — burst damage one-shots Steel Balls before they close in", "strength": 3 },
+        { "unit": "Sledgehammer", "reason": "Heavy volleys smash medium armor lines efficiently" },
+        { "unit": "War Factory", "reason": "Clears all the summons while acid attack eats the factory itself" },
+        { "unit": "Fortress", "reason": "Acid and heavy hits punish barriers and big HP pools (though it's not a hard counter)", "strength": 1 }
+      ],
+      "counteredBy": [
+        { "unit": "Overlord", "reason": "The Scorpion's biggest counter — flies, outranges it, and it can't answer air", "strength": 3 },
+        { "unit": "Crawler", "reason": "Cheap chaff distracts and surrounds it; its slow burst overkills 100-cost units" },
+        { "unit": "Marksman", "reason": "Snipes it from beyond its reach" },
+        { "unit": "Melting Point", "reason": "Massed Melting Points burn it down before its burst matters" },
+        { "unit": "Stormcaller", "reason": "Artillery pounds the slow giant from far outside its range" },
+        { "unit": "Phoenix", "reason": "Instantly connects to big backline units and bursts them down" },
+        { "unit": "Hacker", "reason": "Gets distracted by hacked units and just spins around instead of dealing damage" }
+      ],
+      "tips": [
+        "Always pair Scorpions with chaff clear (Vulcan or Mustangs) — alone they get swarmed by Crawlers.",
+        "Start with a single Scorpion as an early frontline tank; only mass them once you have Range/Acid tech.",
+        "Field Maintenance is the best survivability tech; Acid Attack scales hard into late game.",
+        "Don't buy Range Enhancement too early — it invites the opponent to pivot into Overlords."
+      ]
+    },
+    {
+      "id": "tarantula",
+      "name": "Tarantula",
+      "emoji": "🕸️",
+      "cost": 400,
+      "type": "ground",
+      "giant": false,
+      "description": "A tanky multi-legged frontliner that clears chaff very well early game and deals decent damage to medium units. Best used as a solid, low-investment early-game wall rather than a scaling core unit.",
+      "counters": [
+        { "unit": "Fang", "reason": "Excellent chaff clear shreds cheap squads" },
+        { "unit": "Crawler", "reason": "Multi-shot attacks and high HP dominate swarm boards" },
+        { "unit": "Mustang", "reason": "Cheap Armor Enhancement makes it a great answer to Mustang-heavy boards" },
+        { "unit": "Wasp", "reason": "Clears fragile air swarms while tanking their damage" },
+        { "unit": "Sledgehammer", "reason": "Deals solid damage against medium squad units" },
+        { "unit": "Arclight", "reason": "Out-tanks and out-damages it in direct trades" }
+      ],
+      "counteredBy": [
+        { "unit": "Melting Point", "reason": "Ramping beam removes the big HP pool efficiently" },
+        { "unit": "Fortress", "reason": "Tarantulas lack the damage to kill it before dying" },
+        { "unit": "Marksman", "reason": "High single-target damage picks the big frame apart from range" },
+        { "unit": "Hacker", "reason": "Multiple Control hacks win outright against Tarantula-heavy boards" },
+        { "unit": "Overlord", "reason": "Heavy air bombardment it can't answer" },
+        { "unit": "Phoenix", "reason": "Air harassment it has no good response to" },
+        { "unit": "Steel Ball", "reason": "Anti-big-unit beam melts its HP pool up close" },
+        { "unit": "Scorpion", "reason": "High burst damage deletes the expensive frontliner" }
+      ],
+      "tips": [
+        "Use Tarantulas as a solid early-game frontline and generally don't build more or tech them — they fall off against giants.",
+        "If you do commit, Spider Mine (300) is the best tech and its real power spike — mines add chaff and distract enemy heavy hitters.",
+        "Armor Enhancement (200) is a cheap, efficient buy specifically against Mustang-heavy opponents.",
+        "Always deploy them at the front to get full value from their HP; pairing with Jump Drive Wasps makes for a strong combined push."
+      ]
+    },
+    {
+      "id": "typhoon",
+      "name": "Typhoon",
+      "emoji": "🌀",
+      "cost": 400,
+      "type": "ground",
+      "giant": false,
+      "description": "A medium frontline unit (deployed in pairs) that hoses down swarms with rapid multi-barrel fire — essentially a bigger Mustang that shreds chaff instead of big units. Works as an aggressive pusher or as a defender against enemy aggression.",
+      "counters": [
+        { "unit": "Crawler", "reason": "Rapid AoE fire mulches crawler swarms before they can surround it" },
+        { "unit": "Fang", "reason": "Clears massed Fangs quickly with sustained volume of fire" },
+        { "unit": "Wasp", "reason": "Strong anti-air volume of fire, especially with Aerial Specialization" },
+        { "unit": "Mustang", "reason": "Out-trades Mustang packs in sustained damage exchanges" },
+        { "unit": "Hound", "reason": "Sustained multi-hit fire shreds groups of Hounds" }
+      ],
+      "counteredBy": [
+        { "unit": "Steel Ball", "reason": "Tanks through the Typhoon's fire and is very good against its Barrier tech" },
+        { "unit": "Fortress", "reason": "Blocks and absorbs the Typhoon's damage while hitting back hard" },
+        { "unit": "Marksman", "reason": "Outranges the short-ranged Typhoon and picks it off from safety" },
+        { "unit": "Melting Point", "reason": "Melts the Typhoon from range before it can close the distance" },
+        { "unit": "Phoenix", "reason": "Repositions to focus down the big single target" },
+        { "unit": "Rhino", "reason": "Gets on top of it quickly and out-brawls it" },
+        { "unit": "Sandworm", "reason": "Dives under the sustained fire and crushes it on emergence" }
+      ],
+      "tips": [
+        "Deploy Typhoons vertically (one behind the other) so both benefit from Barrier and they arrive in waves.",
+        "Barrier is the priority tech; Homing Missile adds long-range damage the unit otherwise lacks.",
+        "It has no range tech — use it up front as an aggressive unit or to defend against pushes, not as backline DPS.",
+        "Don't send Typhoons into medium/heavy armor lines — they kill chaff, not tanks."
+      ]
+    },
+    {
+      "id": "war-factory",
+      "name": "War Factory",
+      "emoji": "🏭",
+      "cost": 400,
+      "type": "ground",
+      "giant": true,
+      "description": "A massive late-game ground giant that acts as a mobile production facility and powerful missile interceptor. It shuts down missile-based compositions while spawning units that match its own level.",
+      "counters": [
+        { "unit": "Stormcaller", "reason": "Its missile interception nullifies Stormcaller barrages, and the intercept effect does not diminish as the round goes on", "strength": 3 },
+        { "unit": "Overlord", "reason": "Intercepts the Overlord's missile volleys, heavily reducing its damage output" },
+        { "unit": "Typhoon", "reason": "Blocks the Typhoon's stream of missiles before they land" },
+        { "unit": "Sledgehammer", "reason": "Tanks and out-trades masses of medium missile-firing units" },
+        { "unit": "Steel Ball", "reason": "Its huge health pool and sustained output grind down Steel Ball packs" },
+        { "unit": "Sandworm", "reason": "Absolutely demolishes worms — too much HP and firepower to burrow-cycle against", "strength": 3 },
+        { "unit": "Rhino", "reason": "Shoots in all directions, walling off Rhino flanks" },
+        { "unit": "Farseer", "reason": "Massive durable giant that Farseer cannot meaningfully damage" }
+      ],
+      "counteredBy": [
+        { "unit": "Scorpion", "reason": "Siege-mode range plus acid tech melts its huge health pool from safety" },
+        { "unit": "Melting Point", "reason": "Ramping beam damage is ideal against a single enormous target", "strength": 3 },
+        { "unit": "Vulcan", "reason": "Vulcan with Ignite applies burning damage that bypasses its defensive value" },
+        { "unit": "Fortress", "reason": "Fortress with Fang summons and Ignite overwhelms it with sustained damage and chaff" }
+      ],
+      "tips": [
+        "Do not deploy it before round 5; the 200-per-round upkeep (100 with Efficient Maintenance) is too heavy for the early economy.",
+        "Use it primarily as an anti-missile deterrent rather than a summoning factory; that is where most of its value comes from.",
+        "Screen it with shielded Fangs to bait enemy fire before it arrives, and consider range tech to keep it out of danger.",
+        "Remember it cannot equip items, and its spawned units inherit its level, so leveling it improves the whole package."
+      ]
+    },
+    {
+      "id": "wraith",
+      "name": "Wraith",
+      "emoji": "👻",
+      "cost": 400,
+      "type": "air",
+      "giant": true,
+      "description": "A large flying platform that hits many targets at once, making it a premier chaff-clearer whose damage can't be body-blocked. Strong played aggressively on flanks or defensively against swarm-based aggression.",
+      "counters": [
+        { "unit": "Crawler", "reason": "Multi-target beams hit the whole swarm; damage can't be blocked by bodies" },
+        { "unit": "Fang", "reason": "Clears the fragile squads instantly from above" },
+        { "unit": "Sledgehammer", "reason": "Out-ranges and grinds down medium squads that can't fight back well" },
+        { "unit": "Steel Ball", "reason": "Flies out of reach while whittling the slow balls down" },
+        { "unit": "Wasp", "reason": "Multi-target damage chews through Wasp swarms if they lack range/aerial tech" },
+        { "unit": "Hound", "reason": "Top counter to aggressive Hound play thanks to multi-target beam damage", "strength": 3 },
+        { "unit": "Hacker", "reason": "Multi-target damage clears hacked units and threatens the Hacker itself" }
+      ],
+      "counteredBy": [
+        { "unit": "Marksman", "reason": "High single-target range damage, especially with Aerial Specialization, deletes Wraiths", "strength": 3 },
+        { "unit": "Phoenix", "reason": "Charged Shot Phoenixes burst the big air target down" },
+        { "unit": "Melting Point", "reason": "Ramping beam melts the large, slow air frame" },
+        { "unit": "Overlord", "reason": "Out-trades it in big air-vs-air engagements" },
+        { "unit": "Wasp", "reason": "Massed Wasps with Aerial Specialization outscale Wraiths late game" },
+        { "unit": "Farseer", "reason": "Can shoot down and EMP-disable enemy Wraiths" },
+        { "unit": "Phantom Ray", "reason": "Trades favorably as an armored air frontliner against enemy air" }
+      ],
+      "tips": [
+        "Range Enhancement (300) is essentially mandatory and should be bought early — without it Wraiths drift too far forward and die.",
+        "Degenerate Beam (200) adds a strong slow/weaken effect, but watch for Photon Coating which negates it.",
+        "Wraiths love items — all damage and HP items synergize; Floating Artillery Array (400) doubles output if you commit to mass Wraith.",
+        "Use them as your answer to clustered aggressive chaff, and avoid clustering your own units under enemy Wraiths."
+      ]
+    },
+    {
+      "id": "fortress",
+      "name": "Fortress",
+      "emoji": "🏰",
+      "cost": 500,
+      "type": "ground",
+      "giant": true,
+      "description": "A hugely versatile frontline giant that tanks, clears medium units, and covers the sky with Anti-Air Barrage. Can be leveled as a carry, massed cheaply, or used as a Fang-summoning factory.",
+      "counters": [
+        { "unit": "Sledgehammer", "reason": "Its heavy cannon crushes medium armor lines" },
+        { "unit": "Typhoon", "reason": "Tanks the sustained fire and demolishes the mediums underneath" },
+        { "unit": "Fire Badger", "reason": "Too much HP for flame damage while it smashes the Badgers" },
+        { "unit": "Vulcan", "reason": "Barrier shields the fire and the Fortress demolishes the Vulcan quickly", "strength": 3 },
+        { "unit": "Wasp", "reason": "Anti-Air Barrage shreds swarming air units" },
+        { "unit": "Overlord", "reason": "Massed Fortresses with Anti-Air Barrage beat mass Overlord and most air armies" },
+        { "unit": "Marksman", "reason": "Too much bulk to snipe down while it advances and spawns chaff" },
+        { "unit": "Mustang", "reason": "Big armored unit shrugs off small-arms fire and locks Mustangs down" },
+        { "unit": "Rhino", "reason": "Too tanky to trample and hits back extremely hard" },
+        { "unit": "Farseer", "reason": "Too much health for the Farseer's damage to handle as the game goes on" },
+        { "unit": "Sabertooth", "reason": "Bigger tank that out-trades it head-on" },
+        { "unit": "Tarantula", "reason": "Tarantulas lack the damage to kill it before dying" },
+        { "unit": "Phoenix", "reason": "Anti-Air Barrage connects to Phoenixes even with units in front" },
+        { "unit": "Hacker", "reason": "Shielded and too valuable to trade into; produces chaff that screens it" }
+      ],
+      "counteredBy": [
+        { "unit": "Melting Point", "reason": "The best counter — beam ramps through its huge HP and ignores Fang summoning", "strength": 3 },
+        { "unit": "Steel Ball", "reason": "Solid anti-Fortress option; roughly a 50/50 trade that blunts its value" },
+        { "unit": "Crawler", "reason": "Acid Crawlers can dissolve it if timed to hit before support arrives", "strength": 1 },
+        { "unit": "Stormcaller", "reason": "Long-range barrages chip the slow giant before it reaches the fight", "strength": 1 },
+        { "unit": "Scorpion", "reason": "Acid and heavy hits punish barriers and big HP pools", "strength": 1 }
+      ],
+      "tips": [
+        "Core tech package: Anti-Air Barrage + Barrier + Fang Summoning, with Rocket Punch as the flex slot.",
+        "Buy Fortresses as your standard answer to enemy medium-unit compositions (Sledgehammers, Typhoons, Fire Badgers).",
+        "Barrier also blocks acid, EMP, and battlefield spells — it's defensive tech against far more than damage.",
+        "Fang Summoning feeds bodies to enemy single-target carries (Melting Point, Marksman) so your giants survive longer."
+      ]
+    },
+    {
+      "id": "melting-point",
+      "name": "Melting Point",
+      "emoji": "🔦",
+      "cost": 500,
+      "type": "ground",
+      "giant": true,
+      "description": "A backline beam giant whose damage ramps up the longer it stays on one target, making it the game's premier giant-killer. Useless against swarms, devastating against anything big.",
+      "counters": [
+        { "unit": "Fortress", "reason": "The standard response to a Fortress — the ramping beam burns through its huge HP", "strength": 3 },
+        { "unit": "Vulcan", "reason": "Melts the big slow flamer from outside its range" },
+        { "unit": "War Factory", "reason": "One of the few units that can burn down its massive HP pool", "strength": 3 },
+        { "unit": "Overlord", "reason": "Beam ramps on the expensive air giant and deletes it" },
+        { "unit": "Wraith", "reason": "High-value air target the beam locks onto and melts" },
+        { "unit": "Scorpion", "reason": "Out-damages the slow giant in a straight ranged duel" },
+        { "unit": "Abyss", "reason": "Ramping beam damage is the premier answer to any high-health giant", "strength": 3 },
+        { "unit": "Sandworm", "reason": "Beam ramps up and burns through it whenever it surfaces" },
+        { "unit": "Rhino", "reason": "Ramping beam kills the charging Rhino before it does its job" },
+        { "unit": "Tarantula", "reason": "Ramping beam removes the big HP pool efficiently" },
+        { "unit": "Sabertooth", "reason": "Ramping beam removes the big single tank" },
+        { "unit": "Sledgehammer", "reason": "Damage Sharing tech plus the ramping beam melts sledge lines" },
+        { "unit": "Phantom Ray", "reason": "Ramping beam (especially with Energy Absorption) melts armored air units" },
+        { "unit": "Raiden", "reason": "Ramping beam damage burns through the costly giant" },
+        { "unit": "Farseer", "reason": "Ramping beam damage destroys expensive flying giants" },
+        { "unit": "Typhoon", "reason": "Melts the Typhoon from range before it can close the distance" }
+      ],
+      "counteredBy": [
+        { "unit": "Steel Ball", "reason": "The hard counter — tanks the beam while Energy Absorption feeds off it", "strength": 3 },
+        { "unit": "Crawler", "reason": "Cheap chaff resets the beam ramp constantly; it can never reach full damage", "strength": 3 },
+        { "unit": "Marksman", "reason": "Snipes the fragile beam platform from long range" },
+        { "unit": "Stormcaller", "reason": "Artillery kills it in the backline before it connects with a target" },
+        { "unit": "Hacker", "reason": "Retargeting disruption wastes its ramp time rather than killing it directly", "strength": 1 },
+        { "unit": "Fang", "reason": "Ignite tech and massed cheap bodies whittle it down while soaking its expensive shots", "strength": 1 },
+        { "unit": "Wasp", "reason": "Free damage onto expensive ground giants that often can't shoot back" },
+        { "unit": "Phoenix", "reason": "Snipes the fragile beam platform while flying out of its reach" }
+      ],
+      "tips": [
+        "Range Enhancement is the most important tech — usually the first buy, letting it sit safely in the backline.",
+        "Always pair it with chaff clear (e.g. Vulcan, Mustangs); its beam is worthless against swarms and it dies distracted.",
+        "Crawler Summoning gives it its own bodyguard screen; Electromagnetic Barrage is excellent late-game against shields.",
+        "It only pays off when it connects with a high-value target — don't buy it into chaff-heavy boards."
+      ]
+    },
+    {
+      "id": "overlord",
+      "name": "Overlord",
+      "emoji": "🚁",
+      "cost": 500,
+      "type": "air",
+      "giant": true,
+      "description": "A flying gunship giant that rains heavy volleys on ground forces and pressures towers hard. Best used aggressively behind a tanky frontline rather than in passive long-range standoffs.",
+      "counters": [
+        { "unit": "Steel Ball", "reason": "Bombards ground mediums that have no way to shoot back at air" },
+        { "unit": "Sledgehammer", "reason": "Heavy volleys crush armor lines from above" },
+        { "unit": "Scorpion", "reason": "Its biggest counter — flies over the Scorpion and outranges it", "strength": 3 },
+        { "unit": "Rhino", "reason": "Kites the melee charger from the air" },
+        { "unit": "Vulcan", "reason": "Flamethrowers cannot touch it while it pounds the Vulcan down" },
+        { "unit": "Stormcaller", "reason": "Closes in from the air and deletes the fragile artillery" },
+        { "unit": "Arclight", "reason": "Arclight has no anti-air and dies helplessly to air attacks" },
+        { "unit": "Fire Badger", "reason": "Heavy ranged strikes from a unit the Badger cannot answer" },
+        { "unit": "Tarantula", "reason": "Heavy air bombardment it can't answer" },
+        { "unit": "Sabertooth", "reason": "Air unit it can't shoot; Launcher Overload beats its missile interception" },
+        { "unit": "Sandworm", "reason": "Ground cannon volleys hit hard the moment the worm emerges" },
+        { "unit": "Hacker", "reason": "Barrier tech and heavy fire shut the Hacker down" },
+        { "unit": "Raiden", "reason": "Heavy anti-air firepower punishes a Raiden-based backline" },
+        { "unit": "Phantom Ray", "reason": "Massed Overlords and anti-air overwhelm multiple Phantom Rays" },
+        { "unit": "Wraith", "reason": "Out-trades it in big air-vs-air engagements" }
+      ],
+      "counteredBy": [
+        { "unit": "Marksman", "reason": "Long-range snipers outpace its damage and pick it off", "strength": 3 },
+        { "unit": "Phoenix", "reason": "Dedicated long-range anti-everything shooter that outranges it" },
+        { "unit": "Melting Point", "reason": "Beam ramps on the expensive giant and melts it" },
+        { "unit": "Mustang", "reason": "Massed anti-air fire, especially with Aerial Specialization, shreds it" },
+        { "unit": "Fortress", "reason": "Anti-Air Barrage lets massed Fortresses beat mass Overlords" },
+        { "unit": "Wasp", "reason": "Swarm of anti-air attacks is the classic answer to mass Overlord", "strength": 3 },
+        { "unit": "Farseer", "reason": "Protects you from Overlord rush cheese by contesting the air early" },
+        { "unit": "War Factory", "reason": "Intercepts the Overlord's missile volleys, heavily reducing its damage output" }
+      ],
+      "tips": [
+        "Screen it with Rhinos, Steel Balls, or Sledgehammers — an unprotected Overlord dies to ranged fire.",
+        "Buy Launcher Overload before/with Range Enhancement so its missiles don't get intercepted at long range.",
+        "Photon Emission is a must-have when supporting aggressive Steel Ball or Rhino pushes.",
+        "High-Explosive Ammo is a very cheap fix against Crawler/Fang/Wasp swarms; Mothership protects it from single-target carries."
+      ]
+    },
+    {
+      "id": "vulcan",
+      "name": "Vulcan",
+      "emoji": "🌋",
+      "cost": 500,
+      "type": "ground",
+      "giant": true,
+      "description": "A giant flamethrower platform that clears everything small — the premier anti-chaff unit in the game. Bring it when the enemy's crawlers, fangs, or mustangs are bunched where its fire can reach them.",
+      "counters": [
+        { "unit": "Crawler", "reason": "Continuous flame AoE erases entire crawler waves", "strength": 3 },
+        { "unit": "Fang", "reason": "Massed Fangs evaporate in its fire cone", "strength": 3 },
+        { "unit": "Mustang", "reason": "Burns down Mustang packs faster than they can chip it" },
+        { "unit": "Steel Ball", "reason": "With Scorching Fire (+attack) it cooks medium units like Steel Balls and Sledgehammers" },
+        { "unit": "Hound", "reason": "One of the best answers to Hound aggression; flame AoE wipes packs instantly", "strength": 3 },
+        { "unit": "Hacker", "reason": "Instantly burns down hacked chaff, nullifying the distraction plan" }
+      ],
+      "counteredBy": [
+        { "unit": "Fortress", "reason": "Shields the fire and demolishes the Vulcan quickly in return", "strength": 3 },
+        { "unit": "Melting Point", "reason": "Beam melts the big, slow Vulcan from range" },
+        { "unit": "Phoenix", "reason": "Flies over the flames and snipes it with impunity" },
+        { "unit": "Stormcaller", "reason": "Artillery pounds it from far outside flamethrower range" },
+        { "unit": "Rhino", "reason": "Charges through the fire and tears the Vulcan apart in melee" },
+        { "unit": "Marksman", "reason": "Snipes the flame tank from far outside its short range" },
+        { "unit": "Wasp", "reason": "Attacks from the air while the Vulcan's flames can't reach them" },
+        { "unit": "Overlord", "reason": "Flamethrowers cannot touch it while it pounds the Vulcan down" }
+      ],
+      "tips": [
+        "Place forward Fangs to bait enemy chaff into one spot where the Vulcan's cone hits everything at once.",
+        "Always pair it with single-target damage (Melting Point, Marksman, Phoenix, Overlord) — the Vulcan only handles the small stuff.",
+        "Scorching Fire is the key tech for burning medium units; be careful with Range Enhancement or it gets stuck shooting giants.",
+        "Don't buy a Vulcan to stop aggression — it's too slow to respond; use Wraith or defensive units instead."
+      ]
+    }
+  ],
+  "generalTips": [
+    { "category": "Economy", "tip": "Skip the reinforcement card in rounds 2 and 3 most of the time to bank the 50 supply, unless you are offered a top-tier card that changes your whole game plan." },
+    { "category": "Economy", "tip": "Don't waste extra supply just because you have it; saving for an impactful turn beats reckless spending — the economy rewards smart spending over expansion for its own sake." },
+    { "category": "Economy", "tip": "Pick economy-oriented specialists (Deployment, Supply, Junior Recruitment) early so your income scales into the mid-game." },
+    { "category": "Supply Drops", "tip": "Vary your strategy based on the cards you are offered each round instead of forcing a fixed build; the offered cards should shape your game plan." },
+    { "category": "Supply Drops", "tip": "Avoid picking expensive cards like Lightning Storm or Nuke too early; winning early rounds matters less than building economy and board strength." },
+    { "category": "Supply Drops", "tip": "Never hold items in your inventory; equip them immediately (for example on flankers) — unused items are a significant tempo loss." },
+    { "category": "Positioning", "tip": "Victory is determined by which units are deployed against which units, not raw stats — position and matchup beat pure power." },
+    { "category": "Positioning", "tip": "Cover your flanks early with cheap units like Crawlers and Fangs; protecting the edges of your army enables stronger plays on later turns." },
+    { "category": "Positioning", "tip": "Don't neglect the tower-side lane; overcommitting elsewhere while leaving it open is a common way to lose games." },
+    { "category": "Tech vs Expand", "tip": "Use Intensive Training and unit levels on mid-tier units like Mustangs, Sledgehammers, and Hackers; leveling giants commits too many resources and under-develops your board." },
+    { "category": "Tech vs Expand", "tip": "Avoid over-committing to a single unit type; keep board balance so one enemy counter cannot invalidate your whole army." },
+    { "category": "Specialists", "tip": "Supply Specialist (+50 supply per round with no drawback) is the easiest and best starting specialist for new players; Quick Supply (200 supply in round one) is a flexible alternative." },
+    { "category": "Specialists", "tip": "Choose your starting specialist based on your starting unit combination and the opponent's composition rather than treating tier lists as absolute law." },
+    { "category": "Common Mistakes", "tip": "Don't build reactive counters like Melting Point automatically; first assess whether the matchup actually justifies the investment." },
+    { "category": "Common Mistakes", "tip": "When selling a leveled unit that carries an item, reclaim the item first so you can reuse it on giants or other key units instead of losing its value." }
+  ]
+}
